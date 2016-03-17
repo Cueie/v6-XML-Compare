@@ -12,4 +12,8 @@
         <item quantity="other">%d days ago</item>
         <item quantity="one">%d day ago</item>
     </plurals>
+    <plurals name="view_realtime_clear">
+        <item quantity="other">Clear</item>
+        <item quantity="one">Sunny</item>
+    </plurals>
 </resources>

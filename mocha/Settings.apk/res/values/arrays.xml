@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="font_size_scale">
+        <item>0.86</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.21</item>
+    </string-array>
+    <string-array name="st_antispam_mode_defined_state">
+        <item>@string/st_antispam_mode_smart_state</item>
+        <item>@string/st_antispam_mode_blacklist_state</item>
+        <item>@string/st_antispam_mode_only_contacts_state</item>
+        <item>@string/st_antispam_mode_only_whitelist_state</item>
+        <item>@string/st_antispam_mode_only_all_deny_state</item>
+    </string-array>
+    <string-array name="st_antispam_mode_defined_state_international">
+        <item>@string/st_antispam_mode_blacklist_state</item>
+        <item>@string/st_antispam_mode_only_contacts_state</item>
+        <item>@string/st_antispam_mode_only_whitelist_state</item>
+        <item>@string/st_antispam_mode_only_all_deny_state</item>
+    </string-array>
     <string-array name="timezone_filters">
         <item>America</item>
         <item>Europe</item>
@@ -76,16 +95,19 @@
         <item>1800000</item>
     </string-array>
     <string-array name="entries_font_size">
-        <item>Small</item>
         <item>Normal</item>
-        <item>Large</item>
+        <item>medium</item>
+        <item>large</item>
         <item>Huge</item>
+        <item>godzilla</item>
     </string-array>
     <string-array name="entryvalues_font_size">
-        <item>0.85</item>
-        <item>1.0</item>
-        <item>1.15</item>
-        <item>1.30</item>
+        <item>small</item>
+        <item>normal</item>
+        <item>medium</item>
+        <item>large</item>
+        <item>huge</item>
+        <item>godzilla</item>
     </string-array>
     <string-array name="tts_rate_entries">
         <item>Very slow</item>
@@ -218,7 +240,7 @@
     <string-array name="wifi_sleep_policy_entries">
         <item>Always</item>
         <item>Only when plugged in</item>
-        <item>Never (increases data usage)</item>
+        <item>Never (uses more mobile data)</item>
     </string-array>
     <string-array name="wifi_sleep_policy_entries_wifi_only">
         <item>Always</item>
@@ -884,6 +906,15 @@
         <item>white</item>
         <item>\#FFAA00AA</item>
     </string-array>
+    <string-array name="led_color_entries">
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Cyan</item>
+        <item>White</item>
+        <item>Violet</item>
+    </string-array>
     <string-array name="mi1_led_color_values">
         <item>blue</item>
         <item>red</item>
@@ -900,16 +931,23 @@
         <item>Violet</item>
         <item>Purple</item>
     </string-array>
-    <string-array name="led_color_entries">
-        <item>Blue</item>
-        <item>Red</item>
-        <item>Yellow</item>
+    <string-array name="pink_panel_led_color_values">
+        <item>blue</item>
+        <item>red</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>\#FFAA00AA</item>
+    </string-array>
+    <string-array name="pink_panel_led_color_entries">
+        <item>Lilac</item>
+        <item>Ruby</item>
+        <item>Orange</item>
         <item>Green</item>
-        <item>Cyan</item>
-        <item>White</item>
-        <item>Violet</item>
+        <item>Magenta</item>
     </string-array>
     <string-array name="always_enabled_app_list">
+        <item>com.android.contacts</item>
+        <item>com.android.mms</item>
         <item>com.android.providers.applications</item>
         <item>com.android.providers.calendar</item>
         <item>com.android.providers.contacts</item>
@@ -946,6 +984,10 @@
         <item>SIM</item>
         <item>AKA</item>
     </string-array>
+    <string-array name="wifi_eap_method_add_sim_for_cmcc">
+        <item>PEAP</item>
+        <item>SIM</item>
+    </string-array>
     <string-array name="screen_key_press_action">
         <item>Show recent apps tray</item>
         <item>Show menu</item>
@@ -971,7 +1013,7 @@
         <item>show_menu</item>
     </string-array>
     <string-array name="screen_key_long_press_timeout">
-        <item>0.5 second</item>
+        <item>0.5 seconds</item>
         <item>1 second</item>
         <item>1.5 seconds</item>
         <item>2 seconds</item>
@@ -999,10 +1041,12 @@
         <item>-1</item>
     </string-array>
     <string-array name="font_size_title">
-        <item>@string/font_size_small</item>
-        <item>@string/font_size_normal</item>
-        <item>@string/font_size_medium</item>
-        <item>@string/font_size_large</item>
+        <item>@string/layout_size_small</item>
+        <item>@string/layout_size_normal</item>
+        <item>@string/layout_size_medium</item>
+        <item>@string/layout_size_large</item>
+        <item>@string/layout_size_huge</item>
+        <item>@string/layout_size_exhuge</item>
     </string-array>
     <integer-array name="font_size_preference_preview_size">
         <item>14</item>
@@ -1115,6 +1159,16 @@ Note: Only for Ubuntu 8.04!"</item>
         <item>Brilliant</item>
         <item>Standard</item>
     </string-array>
+    <string-array name="screen_optimize_title">
+        <item>Automatic contrast</item>
+        <item>Increased contrast</item>
+        <item>Standard</item>
+    </string-array>
+    <string-array name="screen_optimize_summary">
+        <item>Optimize contrast for available light</item>
+        <item>"Increase display's contrast"</item>
+        <item>Contrast will remain constant</item>
+    </string-array>
     <string-array name="perms_hips_values">
         <item>2</item>
         <item>1</item>
@@ -1142,8 +1196,8 @@ Note: Only for Ubuntu 8.04!"</item>
         <item>1</item>
     </string-array>
     <string-array name="phone_call_noise_suppression_title">
-        <item>Single-mic noise suppression</item>
-        <item>Dual-mic noise suppression</item>
+        <item>Single mic noise suppression</item>
+        <item>Dual mic noise suppression</item>
     </string-array>
     <string-array name="phone_call_noise_suppression_values">
         <item>1</item>
@@ -1183,20 +1237,6 @@ Note: Only for Ubuntu 8.04!"</item>
         <item>1</item>
         <item>2</item>
     </string-array>
-    <string-array name="slideshow_time_entries">
-        <item>5 minutes</item>
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>Unlimited</item>
-    </string-array>
-    <string-array name="slideshow_time_entryValues">
-        <item>300</item>
-        <item>900</item>
-        <item>1800</item>
-        <item>3600</item>
-        <item>-1</item>
-    </string-array>
     <string-array name="preferred_app_entries">
         <item>Launcher</item>
         <item>Dial</item>
@@ -1206,6 +1246,7 @@ Note: Only for Ubuntu 8.04!"</item>
         <item>Gallery</item>
         <item>Music</item>
         <item>Email</item>
+        <item>Video</item>
     </string-array>
     <string-array name="permission_risk_privacy">
         <item>android.permission.ACCESS_COARSE_LOCATION</item>
@@ -1292,5 +1333,246 @@ Note: Only for Ubuntu 8.04!"</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
+    </string-array>
+    <string-array name="handy_mode_size_text_entries">
+        <item>4.5 inches</item>
+        <item>4.0 inches</item>
+        <item>3.5 inches</item>
+    </string-array>
+    <string-array name="handy_mode_size_value_entries">
+        <item>4.5</item>
+        <item>4.0</item>
+        <item>3.5</item>
+    </string-array>
+    <string-array name="agps_network_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="agps_network_entries">
+        <item>Home network</item>
+        <item>All network</item>
+    </string-array>
+    <string-array name="agps_si_mode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="agps_si_mode_entries">
+        <item>MSB</item>
+        <item>MSA</item>
+    </string-array>
+    <string-array name="agps_apn_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="agps_apn_entries">
+        <item>CMWAP</item>
+        <item>CMNET</item>
+    </string-array>
+    <string-array name="agps_reset_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="agps_reset_type_entries">
+        <item>HOT</item>
+        <item>WARM</item>
+        <item>COLD</item>
+    </string-array>
+    <string-array name="install_non_market_app_entries">
+        <item>Turn on (recommended)</item>
+        <item>"Don't use (dangerous)"</item>
+    </string-array>
+    <string-array name="install_non_market_app_contents">
+        <item>Turn on</item>
+        <item>"Don't use"</item>
+    </string-array>
+    <string-array name="lock_screen_secure_after_timeout_values">
+        <item>0</item>
+        <item>60000</item>
+        <item>120000</item>
+        <item>300000</item>
+        <item>900000</item>
+        <item>1800000</item>
+    </string-array>
+    <string-array name="lock_screen_secure_after_timeout_entries">
+        <item>Immediately</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>5 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+    </string-array>
+    <string-array name="fluency_mode_entries">
+        <item>Hide system animations</item>
+        <item>Show system animations</item>
+    </string-array>
+    <string-array name="fluency_mode_summaries">
+        <item>"Speeds up device's performance"</item>
+        <item>"May slow down device's performance"</item>
+    </string-array>
+    <string-array name="fluency_mode_confirms">
+        <item>Reboot your device to apply this setting?</item>
+        <item>Reboot your device to apply this setting?</item>
+    </string-array>
+    <string-array name="miui_entries_font_size">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+        <item>XXL</item>
+        <item>XXXL</item>
+    </string-array>
+    <string-array name="organized_locales">
+        <item>dz</item>
+        <item>ao</item>
+        <item>ar</item>
+        <item>bh</item>
+        <item>bd</item>
+        <item>be</item>
+        <item>bo</item>
+        <item>bw</item>
+        <item>br</item>
+        <item>cm</item>
+        <item>cl</item>
+        <item>co</item>
+        <item>cd</item>
+        <item>cr</item>
+        <item>ci</item>
+        <item>cu</item>
+        <item>do</item>
+        <item>ec</item>
+        <item>eg</item>
+        <item>sv</item>
+        <item>gq</item>
+        <item>et</item>
+        <item>fk</item>
+        <item>fr</item>
+        <item>gf</item>
+        <item>gh</item>
+        <item>gt</item>
+        <item>gy</item>
+        <item>ht</item>
+        <item>hn</item>
+        <item>hk</item>
+        <item>in</item>
+        <item>id</item>
+        <item>ir</item>
+        <item>iq</item>
+        <item>il</item>
+        <item>jm</item>
+        <item>jo</item>
+        <item>kz</item>
+        <item>ke</item>
+        <item>kw</item>
+        <item>lb</item>
+        <item>ls</item>
+        <item>ly</item>
+        <item>lt</item>
+        <item>mw</item>
+        <item>my</item>
+        <item>mr</item>
+        <item>mu</item>
+        <item>mx</item>
+        <item>ma</item>
+        <item>mz</item>
+        <item>mm</item>
+        <item>na</item>
+        <item>np</item>
+        <item>ni</item>
+        <item>ng</item>
+        <item>kp</item>
+        <item>om</item>
+        <item>pk</item>
+        <item>ps</item>
+        <item>pa</item>
+        <item>py</item>
+        <item>pe</item>
+        <item>ph</item>
+        <item>qa</item>
+        <item>ru</item>
+        <item>rw</item>
+        <item>sa</item>
+        <item>sn</item>
+        <item>sg</item>
+        <item>so</item>
+        <item>za</item>
+        <item>gs</item>
+        <item>kr</item>
+        <item>es</item>
+        <item>lk</item>
+        <item>sd</item>
+        <item>sr</item>
+        <item>sz</item>
+        <item>ch</item>
+        <item>sy</item>
+        <item>tw</item>
+        <item>tz</item>
+        <item>th</item>
+        <item>tn</item>
+        <item>tr</item>
+        <item>ug</item>
+        <item>ua</item>
+        <item>ae</item>
+        <item>us</item>
+        <item>uy</item>
+        <item>uz</item>
+        <item>ve</item>
+        <item>vn</item>
+        <item>ye</item>
+        <item>zm</item>
+        <item>zw</item>
+    </string-array>
+    <string-array name="broadcast_locales">
+        <item>AR</item>
+        <item>BO</item>
+        <item>BR</item>
+        <item>CL</item>
+        <item>CO</item>
+        <item>EC</item>
+        <item>GF</item>
+        <item>GY</item>
+        <item>IN</item>
+        <item>IL</item>
+        <item>PY</item>
+        <item>PE</item>
+        <item>SR</item>
+        <item>TW</item>
+        <item>UY</item>
+        <item>VE</item>
+    </string-array>
+    <string-array name="common_password_business_keys">
+        <item>miui_keyguard</item>
+        <item>childrenmode</item>
+        <item>file_explorer</item>
+    </string-array>
+    <string-array name="common_password_business_clickable_default">
+        <item>true</item>
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+    <string-array name="common_password_business_names">
+        <item>Lock screen</item>
+        <item>Child mode</item>
+        <item>File Explorer</item>
+    </string-array>
+    <integer-array name="alarm_repeat_type_values">
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+    <integer-array name="alarm_repeat_type_no_workdays_values">
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+    <string-array name="alarm_repeat_type">
+        <item>Every day</item>
+        <item>Weekdays</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="alarm_repeat_type_no_workdays">
+        <item>Every day</item>
+        <item>Weekdays</item>
+        <item>Custom</item>
     </string-array>
 </resources>
